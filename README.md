@@ -11,3 +11,4 @@ Git usage
 - _push_ (when you want to send your commits to the server) : `git push origin master` (origin : server alias, try `git remote -v`), _master_ : man working branch.
 
 We will see later for branching, merging, etc.
+=======
