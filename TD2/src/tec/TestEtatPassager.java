@@ -1,10 +1,8 @@
-package tec;
-import tec.*;
 
-public class TestEtatPassager {
-    public TestEtatPassager(){};
+class TestEtatPassager{
+
     void testExterieur(){
-	EtatPassager dh = new EtatPassager(); 
+	EtatPassager dh = new EtatPassager();
 	assert dh.estAssis() == false;
 	assert dh.estDebout() == false;
 	assert dh.estExterieur();
@@ -12,18 +10,19 @@ public class TestEtatPassager {
     }
     void testAssis(){
 	EtatPassager dh = new EtatPassager();
-	assert dh.assis().estAssis();
-	assert dh.assis().estDebout() == false;
-	assert dh.assis().estExterieur() == false;
-	assert dh.assis().estInterieur();
+	EtatPassager as = dh.assis();
+	assert as.estAssis();
+	assert as.estDebout() == false;
+	assert as.estExterieur() == false;
+	assert as.estInterieur();
     }
     void testDebout(){
 	EtatPassager dh = new EtatPassager();
-	EtatPassager db = dh.debout();
-	assert db.estAssis() == false;
-	assert db.estDebout();
-	assert db.estExterieur() == false;
-	assert db.estInterieur();
+	EtatPassager de = dh.debout();
+	assert de.estAssis() == false;
+	assert de.estDebout();
+	assert de.estExterieur() == false;
+	assert de.estInterieur();
     }
     void lancer(){
 	int i = 0;
