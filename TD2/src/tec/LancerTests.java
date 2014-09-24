@@ -13,5 +13,7 @@ class LancerTests {
 
         // comment lancer les tests ?
         System.out.println("Il reste à faire les tests unitaires fonctionnels...");
+	TestEtatPassager te = new TestEtatPassager();
+	te.lancer();
     }
 }
