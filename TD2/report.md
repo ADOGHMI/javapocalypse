@@ -142,4 +142,6 @@ Sans la méthode `valeur` on aurait rien changé dans le code car la méthode `t
 
 EL MOUMNI Mohammed : Ce TD a été pour moi l'occasion de découvrir le mécanisme des assert très utile pour la réalisation des tests unitaires. J'ai aussi pu me familiariser avec la réalisation et la compilation de paquetages.
 
-BENKIRANE Mohamed : Grace à ce TD j’ai vu l’intérêt des tests unitaires pour vérifier la réalisation des classes. On a pu par la suite corriger des bugs. Et au final on a pu comprendre le mécanisme de paquetage.   
+BENKIRANE Mohamed : Grace à ce TD j’ai vu l’intérêt des tests unitaires pour vérifier la réalisation des classes. On a pu par la suite corriger des bugs. Et au final on a pu comprendre le mécanisme de paquetage.  
+
+DOGHMI Amine : Ce deuxième TD m'a permis de confirmer l'importance des tests dans la création et la manipulation des classes. C'était aussi l'occasion pour moi de comprendre comment gérer les packtages (Compilation/ réalisation).
