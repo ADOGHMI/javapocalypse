@@ -52,8 +52,8 @@ public class JaugeNaturel {
      */
     public boolean estVert() {
         if (valeur < 0)
-            return true;
-        return valeur >= 0 && !estRouge();
+            return false;
+        return valeur >= 0 && valeur < max;
     }
 
     /**
@@ -62,7 +62,7 @@ public class JaugeNaturel {
      * @return vrai si niveau <= vigieMin.
      */
     public boolean estBleu() {
-        return valeur < 0;
+        return valeur <= max;
     }
 
     /**
@@ -77,9 +77,6 @@ public class JaugeNaturel {
      * Decremente le niveau d'une unite.
      */
     public void decrementer() {
-        valeur--;
-        valeur--;
-        valeur--;
         valeur--;
     }
 
