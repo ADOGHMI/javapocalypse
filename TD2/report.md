@@ -77,6 +77,8 @@ Ce type de code s'il est mal utilisé peut tout simplement bloquer l'exécution 
 
 #### Classe `EtatPassager`
 
+Les attributs de la classe `EtatPassager` sont déclarés privés, et aucune méthode de cette classe ne permet de modifier l'état d'un passager. Ainsi les instances de cette classes sont des objets constants.
+
 Le choix qui a été fait si l'on se réfère au diagramme de classes est qu'un `PassagerStandard` possède un `EtatPassager`. Quand l'on considère un passager, on va suivre un seul et même passager et par conséquent, on va suivre son instance. En revanche, concernant l'état d'un passager, on a affaire à des états **différents**, par conséquent il est plus juste de travailler sur des objets eux aussi différents. En ayant un objet fixé à l'instanciation, on est forcé de travailler ainsi.
 
 A chaque changement d'état, un `PassagerStandard` voit son objet `EtatPassager` remplacé par une nouvelle référence.
@@ -128,8 +130,14 @@ L'attribut de type `int` `valeur` est replacé par un attribut de type `BigDecim
 
 L'attribut `valeur` ayant changé de type, nous devons aussi modifier le type de retour du _getter_ `int valeur()`. Cette modification doit être prise en compte dans le test de dépassement, puisqu'au lieu de travailler avec des `int`, on travaille maintenant avec de très gros nombres de type différent.
 
+La comparaison entre objets de types différents ou de type 'BigDecimal' avec les outils ordinaires (!=, == ...) est impossible. On utilise alors la méthode compareTo(BidDecimal) qui nous offre la possibilité de convertir deux BigDecimal.
+
+Sans la méthode `valeur` on aurait rien changé dans le code car la méthode `testDeplacement()` ne fait qu'appeler les méthodes de `JaugeNaturel` pour vérifier les assertions.
+
 **SANS LA METHODE VALEUR ?**
 
 #### Conclusion
 
 #### Commentaires
+
+EL MOUMNI Mohammed : Ce TD a été pour moi l'occasion de découvrir le mécanisme des assert très utile pour la réalisation des tests unitaires. J'ai aussi pu me familiariser avec la réalisation et la compilation de paquetages.
